@@ -6,13 +6,18 @@ export class Persona{//clase
     private apellido: string;
     private dni: number;
 
-    constructor(nombre:string, edad:number){//creador de una instancia de mi clase, seria el molde de la torta
+    constructor(nombre:string, edad:number, apellido:string = 'defecto', dni?:number){//creador de una instancia de mi clase, seria el molde de la torta
         this.nombre = nombre;
         this.edad = edad;
+        this.apellido = apellido;
+        this.dni = dni || 0;
     }
 
     getNombre(): string{
         return this.nombre;
+    }
+    getApellido(): string{
+        return this.apellido;
     }
     setNombre(nombreNuevo: string){
         this.nombre = nombreNuevo;

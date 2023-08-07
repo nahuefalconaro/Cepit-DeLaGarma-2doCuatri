@@ -2,12 +2,18 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Persona = void 0;
 var Persona = /** @class */ (function () {
-    function Persona(nombre, edad) {
+    function Persona(nombre, edad, apellido, dni) {
+        if (apellido === void 0) { apellido = 'defecto'; }
         this.nombre = nombre;
         this.edad = edad;
+        this.apellido = apellido;
+        this.dni = dni || 0;
     }
     Persona.prototype.getNombre = function () {
         return this.nombre;
+    };
+    Persona.prototype.getApellido = function () {
+        return this.apellido;
     };
     Persona.prototype.setNombre = function (nombreNuevo) {
         this.nombre = nombreNuevo;

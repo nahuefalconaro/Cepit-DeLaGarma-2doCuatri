@@ -28,29 +28,31 @@ Object.defineProperty(exports, "__esModule", { value: true });
 //persona es la clase/molde
 //nahuel y agustin son el objeto/instancia
 var Persona_1 = require("./Persona");
-var personas = new Array();
-function crearPersona(nombre, edad) {
-    return new Persona_1.Persona(nombre, edad);
-}
-console.log(personas.length);
-personas.forEach(function (p) {
-    console.log('primera iteracion de for');
-    console.log(p.getNombre() + p.getEdad());
-});
-var i = 0;
-while (i < 10) {
-    //let newName:string = readline.question('Ingrese nuevo nombre: ');
-    //let newAge:number = readline.questionInt('Ingrese nueva edad: ');
-    var newName = 'Nombre' + i;
-    var newAge = i;
-    personas.push(crearPersona(newName, newAge));
-    i++;
-}
-console.log('Segunda iteracion', personas.length);
-personas.forEach(function (p) {
-    console.log(p.getNombre() + p.getEdad());
-});
-// let nahuel = new Persona('Nahuel', 17);
+// import * as readline from 'readline-sync';
+// let personas: Persona[] = new Array()
+// function crearPersona(nombre:string, edad:number){
+//     return new Persona(nombre, edad,undefined,465465)
+// }
+// console.log(personas.length)
+// personas.forEach(p => {
+//     console.log('primera iteracion de for')
+//     console.log(p.getNombre() + p.getEdad())
+// });
+// let i = 0;
+// while(i<10){
+//     //let newName:string = readline.question('Ingrese nuevo nombre: ');
+//     //let newAge:number = readline.questionInt('Ingrese nueva edad: ');
+//     let newName:string = 'Nombre'+i;
+//     let newAge:number = i;
+//     personas.push(crearPersona(newName, newAge))
+//     i++;
+// }
+// console.log('Segunda iteracion', personas.length)
+// personas.forEach(p => {
+//     console.log(p.getNombre() + p.getEdad())
+// });
+var nahuel = new Persona_1.Persona('Nahuel', 17, undefined, 456465);
+console.log(nahuel.getApellido());
 // let Agustin = new Persona('Agustin', 22);
 // let natalia = new Persona('Natalia', 22);
 // let personasObjeto: Persona[] = new Array()

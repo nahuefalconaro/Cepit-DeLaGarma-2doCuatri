@@ -1,0 +1,1 @@
+Constructor: Funcion de una clase que nos permite crear una instancia de la misma
