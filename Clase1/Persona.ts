@@ -14,6 +14,12 @@ export class Persona{//clase
     getNombre(): string{
         return this.nombre;
     }
+    setNombre(nombreNuevo: string){
+        this.nombre = nombreNuevo;
+    }
+    getNombreCompleto(): string{
+        return this.getNombre()//getApellido
+    }
     getEdad():number{
         this.calcularEdad()
         return this.edad;
@@ -21,9 +27,7 @@ export class Persona{//clase
     getAltura(): number{
         return this.altura;
     }
-    setNombre(nombreNuevo: string){
-        this.nombre = nombreNuevo;
-    }
+
     setAltura(alturaNueva: number){
         this.altura = alturaNueva;
     }
@@ -42,3 +46,4 @@ export class Persona{//clase
         this.edad++;
     }
 }
+

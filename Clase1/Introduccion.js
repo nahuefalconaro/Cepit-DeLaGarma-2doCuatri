@@ -28,15 +28,44 @@ Object.defineProperty(exports, "__esModule", { value: true });
 //persona es la clase/molde
 //nahuel y agustin son el objeto/instancia
 var Persona_1 = require("./Persona");
-var nahuel = new Persona_1.Persona('Nahuel', 17);
-//let Agustin = new Persona('Agustin', 22);
-var personasObjeto = new Array();
-personasObjeto.push(nahuel);
-//personasObjeto.push(Agustin);
-personasObjeto.forEach(function (p) {
-    console.log('nombre: ', p.getNombre(), ' altura: ', p.getAltura(), ' edad: ', p.getEdad(), ' es menor?: ', nahuel.getIsMenor());
+var personas = new Array();
+function crearPersona(nombre, edad) {
+    return new Persona_1.Persona(nombre, edad);
+}
+console.log(personas.length);
+personas.forEach(function (p) {
+    console.log('primera iteracion de for');
+    console.log(p.getNombre() + p.getEdad());
 });
-nahuel.setAltura(180);
-nahuel.setNombre('nahue');
-nahuel.cumplirAnios();
-console.log(' edad: ', nahuel.getEdad(), ' altura: ', nahuel.getAltura(), ' nombre: ', nahuel.getNombre(), ' es menor?: ', nahuel.getIsMenor());
+var i = 0;
+while (i < 10) {
+    //let newName:string = readline.question('Ingrese nuevo nombre: ');
+    //let newAge:number = readline.questionInt('Ingrese nueva edad: ');
+    var newName = 'Nombre' + i;
+    var newAge = i;
+    personas.push(crearPersona(newName, newAge));
+    i++;
+}
+console.log('Segunda iteracion', personas.length);
+personas.forEach(function (p) {
+    console.log(p.getNombre() + p.getEdad());
+});
+// let nahuel = new Persona('Nahuel', 17);
+// let Agustin = new Persona('Agustin', 22);
+// let natalia = new Persona('Natalia', 22);
+// let personasObjeto: Persona[] = new Array()
+// personasObjeto.push(nahuel);
+// personasObjeto.push(natalia);
+// personasObjeto.push(Agustin);
+// // personasObjeto.forEach(p=>{
+// //     console.log('nombre: ' ,p.getNombre(), ' altura: ', p.getAltura(), ' edad: ',p.getEdad(),' es menor?: ',nahuel.getIsMenor());
+// // })
+// for (let i = 0; i < personasObjeto.length; i++) {
+//     if(personasObjeto[i].getNombre().toUpperCase() == 'Natalia'.toUpperCase()){
+//         console.log(personasObjeto[i])
+//     }
+// }
+// nahuel.setAltura(180);
+// nahuel.setNombre('nahue');
+// nahuel.cumplirAnios();
+// console.log(' edad: ', nahuel.getEdad(),' altura: ', nahuel.getAltura(),' nombre: ', nahuel.getNombre(), ' es menor?: ',nahuel.getIsMenor());

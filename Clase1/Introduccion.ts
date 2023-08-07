@@ -32,22 +32,55 @@
 //persona es la clase/molde
 //nahuel y agustin son el objeto/instancia
 import { Persona } from "./Persona";
+import * as readline from 'readline-sync';
 
-let nahuel = new Persona('Nahuel', 17);
-//let Agustin = new Persona('Agustin', 22);
+let personas: Persona[] = new Array()
 
-let personasObjeto: Persona[] = new Array()
+function crearPersona(nombre:string, edad:number){
+    return new Persona(nombre, edad)
+}
+console.log(personas.length)
+personas.forEach(p => {
+    console.log('primera iteracion de for')
+    console.log(p.getNombre() + p.getEdad())
+});
+let i = 0;
+while(i<10){
+    //let newName:string = readline.question('Ingrese nuevo nombre: ');
+    //let newAge:number = readline.questionInt('Ingrese nueva edad: ');
+    let newName:string = 'Nombre'+i;
+    let newAge:number = i;
+    personas.push(crearPersona(newName, newAge))
+    i++;
+}
+console.log('Segunda iteracion', personas.length)
+personas.forEach(p => {
+    
+    console.log(p.getNombre() + p.getEdad())
+});
+// let nahuel = new Persona('Nahuel', 17);
+// let Agustin = new Persona('Agustin', 22);
+// let natalia = new Persona('Natalia', 22);
 
-personasObjeto.push(nahuel);
-//personasObjeto.push(Agustin);
+// let personasObjeto: Persona[] = new Array()
 
-personasObjeto.forEach(p=>{
-    console.log('nombre: ' ,p.getNombre(), ' altura: ', p.getAltura(), ' edad: ',p.getEdad(),' es menor?: ',nahuel.getIsMenor());
-})
+// personasObjeto.push(nahuel);
+// personasObjeto.push(natalia);
+// personasObjeto.push(Agustin);
+
+// // personasObjeto.forEach(p=>{
+// //     console.log('nombre: ' ,p.getNombre(), ' altura: ', p.getAltura(), ' edad: ',p.getEdad(),' es menor?: ',nahuel.getIsMenor());
+// // })
+
+// for (let i = 0; i < personasObjeto.length; i++) {
+//     if(personasObjeto[i].getNombre().toUpperCase() == 'Natalia'.toUpperCase()){
+//         console.log(personasObjeto[i])
+//     }
+// }
 
 
-nahuel.setAltura(180);
-nahuel.setNombre('nahue');
-nahuel.cumplirAnios();
+// nahuel.setAltura(180);
+// nahuel.setNombre('nahue');
+// nahuel.cumplirAnios();
 
-console.log(' edad: ', nahuel.getEdad(),' altura: ', nahuel.getAltura(),' nombre: ', nahuel.getNombre(), ' es menor?: ',nahuel.getIsMenor());
+// console.log(' edad: ', nahuel.getEdad(),' altura: ', nahuel.getAltura(),' nombre: ', nahuel.getNombre(), ' es menor?: ',nahuel.getIsMenor());
