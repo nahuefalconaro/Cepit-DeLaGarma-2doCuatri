@@ -12,7 +12,10 @@ export class Persona{//clase
         this.apellido = apellido;
         this.dni = dni || 0;
     }
-
+    getClase():Persona{
+        let copia = new Persona(this.nombre, this.edad, this.apellido, this.dni);
+        return copia;
+    }
     getNombre(): string{
         return this.nombre;
     }

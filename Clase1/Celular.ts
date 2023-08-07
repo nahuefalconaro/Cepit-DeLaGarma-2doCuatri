@@ -12,5 +12,6 @@ class Celular{
 
     getTipoProcesador(){
         return this.procesador.getVelocidad() + this.procesador.getNucleos();
-    }
+    } 
+    
 }

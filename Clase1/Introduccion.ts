@@ -58,8 +58,8 @@ import { Persona } from "./Persona";
     
 //     console.log(p.getNombre() + p.getEdad())
 // });
-//  let nahuel = new Persona('Nahuel', 17, undefined, 456465);
-//  console.log(nahuel.getApellido())
+let nahuel = new Persona('Nahuel', 17, undefined, 456465);
+console.log(nahuel.getClase())
 // let Agustin = new Persona('Agustin', 22);
 // let natalia = new Persona('Natalia', 22);
 

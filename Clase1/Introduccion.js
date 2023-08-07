@@ -52,7 +52,7 @@ var Persona_1 = require("./Persona");
 //     console.log(p.getNombre() + p.getEdad())
 // });
 var nahuel = new Persona_1.Persona('Nahuel', 17, undefined, 456465);
-console.log(nahuel.getApellido());
+console.log(nahuel.getClase());
 // let Agustin = new Persona('Agustin', 22);
 // let natalia = new Persona('Natalia', 22);
 // let personasObjeto: Persona[] = new Array()

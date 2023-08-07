@@ -9,6 +9,9 @@ var Persona = /** @class */ (function () {
         this.apellido = apellido;
         this.dni = dni || 0;
     }
+    Persona.prototype.getClase = function () {
+        console.log(this, 'aca');
+    };
     Persona.prototype.getNombre = function () {
         return this.nombre;
     };
