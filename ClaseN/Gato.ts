@@ -1,3 +1,4 @@
+import { Persona } from "../Clase1/Persona";
 import { Animal } from "./Animal";
 
 export class Gato extends Animal{
@@ -5,8 +6,8 @@ export class Gato extends Animal{
 
     private lamerse:boolean;
 
-    constructor(patas: number, color: string, nombre?:string ){
-        super(patas, color, nombre);
+    constructor(patas: number, color: string, persona:Persona, nombre?:string ){
+        super(patas, color, persona,nombre);
     }
 
     emitirSonido(): void {
