@@ -1,0 +1,69 @@
+Sistema de comandas:
+
+Comanda: Las comandas son los documentos que los camareros redactan para tomar nota de los diferentes pedidos de los clientes, dejando claro qué platos se van a pedir
+
+
+
+- Clase Comanda( n mesa, arreglo de Comidas, fecha y hora, mozo, nro pedido)
+
+
+
+
+
+---------------------------------------------------------------
+
+this: tiene acceso total a los atributos y metodos de la clase en la que esta situada.
+
+Clase Kiosco{
+	
+	golosinas: String[];
+	nombre: string;
+
+	public getGolosinas():String[]{
+		
+	}
+
+	public getNombre():String{
+		return this.nombre
+	}
+}
+Clase Establecimiento{
+
+	kiscos:Kiosco[];
+
+	public imprimirNombreDeTodosLosKioscos(){}
+		this.kioscos.foreach(k =>{
+			k.getNombre();
+		})
+kioscos=> [k1, k2, k3]
+		for(let i =0; i<this.kioscos.length; i++){
+			this.kioscos[i].getNombre();
+		}
+	}
+	public addKiosco(k:Kiosco){
+		try{
+			if(k==null || k.isEmpty()) throw error('k es null o vacio')
+			else this.kioscos.push(k)
+		}
+		catch(e){
+			console.log(e.message)
+			Alert(e.message)
+		}
+		     
+	}
+}
+
+
+let k1 = Kiosco('Tito golosinas');
+let k2 = Kiosco('Chaves golosinas');
+let k3 = Kiosco('Rafa golosinas');
+
+let e = New Establecimiento()
+try{
+e.addKiosco(k1);
+e.addKiosco(k2);
+e.addKiosco(k3);
+
+e.imprimirNombreDeTodosLosKioscos();
+
+
